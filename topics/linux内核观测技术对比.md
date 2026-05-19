@@ -253,8 +253,58 @@ audit（合规兜底）
 | libpcap | 旁路复制**网络包**到用户态 |
 | netlink | 订阅内核**子系统状态变更**的消息总线 |
 
+> 再抽象一层：
+> - **主动注入代码型**：eBPF、内核模块、LD_PRELOAD —— 你决定观测什么、怎么处理
+> - **被动订阅事件型**：inotify/fanotify、audit、netlink —— 内核决定暴露什么，你只能选择订阅哪些
+> - **旁路复制数据型**：libpcap —— 不关心逻辑，只复制原始数据
+
 ---
 
-## 相关概念
+## 八、面试追问 · 考察候选人的四个层次
+
+### 第一层 · 理解边界
+
+> **问：** 你要监控生产环境所有容器的文件访问，记录谁（pid+容器）在什么时候打开了哪个文件。用哪个？为什么不用其他的？
+
+**期望答案：**
+- eBPF hook `sys_enter_openat`，内核态拿 pid + cgroup_id + filename
+- 不用 audit：性能差，文本日志解析慢
+- 不用 fanotify：没有容器信息，且要对每个挂载点单独设置
+- 不用 LD_PRELOAD：Go 程序绕过、容器内部署复杂
+- 不用 libpcap：这不是网络问题
+- 不用内核模块：风险不可控，生产环境审批过不了
+
+### 第二层 · 理解组合
+
+> **问：** 如果你要做一个完整的容器安全观测系统，你会怎么组合这些技术？
+
+**期望答案：**
+
+```
+eBPF（主力）
+  ├── syscall tracepoint → 文件/网络/进程行为
+  ├── kprobe/fentry → 内核内部函数细节
+  ├── XDP/TC → 网络包级观测+策略执行
+  └── cgroup/LSM → 容器级策略
+
+Netlink PROC_CONNECTOR（辅助）
+  └── 进程生命周期（fork/exec/exit 精确事件流）
+
+fanotify（特定场景）
+  └── 恶意文件扫描拦截（杀毒场景）
+
+audit（合规兜底）
+  └── 合规要求的不可篡改日志记录
+```
+
+### 第三层 · 理解取舍
+
+> **问：** eBPF 这么好，为什么 audit 还没被淘汰？
+
+**期望答案：**
+- 合规标准（PCI-DSS、SOC2）明确要求 audit 日志，审计师只认这个
+- audit 日志有**防篡改**语义（发到远端 syslog），eBPF ringbuf 不保证
+- audit 有成熟的生态（ausearch、aureport、SIEM 集成）
+- 部分场景不需要高性能，
 
 [[eBPF]] · [[内核模块]] · [[LD_PRELOAD]] · [[inotify]] · [[fanotify]] · [[audit]] · [[libpcap]] · [[netlink]] · [[proc connector]] · [[LSM BPF]] · [[XDP]] · [[Kprobe]] · [[Tracepoint]] · [[syscall]]
