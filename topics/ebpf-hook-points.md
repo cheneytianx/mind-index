@@ -155,6 +155,10 @@ kprobe(任意符号) > fentry(BTF函数) > tracepoint(静态定义) > LSM(securi
 
 5. **"kprobe 不适合做生产监控——int3 对 icache 和分支预测有影响，且依赖内部实现细节容易因内核升级失效。宁愿用 tracepoint 或 fentry 替代。"**——体现工程判断力
 
+## 相关笔记
+
+- [[kprobe-tracepoint-fentry-底层原理]] — 三种核心机制的指令级深度剖析
+
 ## 相关概念
 
 [[eBPF]] · [[kprobe]] · [[fentry]] · [[tracepoint]] · [[LSM BPF]] · [[BTF]] · [[BPF trampoline]] · [[XDP]] · [[JUMP_LABEL]]
