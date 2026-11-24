@@ -1,5 +1,5 @@
 ---
-tags: [linux, kernel, namespace, container, filesystem]
+tags: [linux, kernel, container]
 created: 2026-07-27
 source: conversation
 aliases: [Mount Namespace, mount namespace]

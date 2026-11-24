@@ -1,5 +1,5 @@
 ---
-tags: [concept, economics, automation, labor, capital]
+tags: [economics, ai]
 created: 2026-07-17
 source: conversation
 ---

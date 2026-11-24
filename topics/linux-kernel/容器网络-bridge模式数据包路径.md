@@ -1,5 +1,5 @@
 ---
-tags: [infra, container, networking]
+tags: [container, network]
 created: 2026-05-13
 source: conversation
 ---

@@ -1,5 +1,5 @@
 ---
-tags: [ebpf, xdp, kernel, network, concept]
+tags: [ebpf, kernel, network]
 created: 2026-11-19
 source: conversation
 ---

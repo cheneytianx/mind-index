@@ -1,5 +1,5 @@
 ---
-tags: [linux, elf, linker, binary, toolchain, concept]
+tags: [linux]
 created: 2026-07-21
 source: conversation
 ---

@@ -1,5 +1,5 @@
 ---
-tags: [linux, build-tools, c, concept]
+tags: [linux]
 created: 2026-07-21
 source: conversation
 ---

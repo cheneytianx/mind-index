@@ -1,5 +1,5 @@
 ---
-tags: [linux-kernel, security, sandbox, container]
+tags: [linux, kernel, security, container]
 created: 2026-06-26
 source: conversation
 ---

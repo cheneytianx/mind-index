@@ -1,3 +1,10 @@
+---
+tags: [ebpf, kernel]
+created: 2026-05-23
+source: conversation
+---
+
+# BTF（BPF Type Format）详解
 
 **BTF 是内核数据结构的"类型字典"——告诉 eBPF 程序"struct task_struct 的第 N 个字段是什么类型、叫什么名字、在偏移量多少处"。**
 

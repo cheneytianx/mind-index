@@ -1,5 +1,5 @@
 ---
-tags: [linux, kernel, syscall, filesystem, concurrency]
+tags: [linux, kernel]
 created: 2026-07-21
 source: conversation
 ---

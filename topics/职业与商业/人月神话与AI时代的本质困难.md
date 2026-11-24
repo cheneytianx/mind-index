@@ -1,5 +1,5 @@
 ---
-tags: [software-engineering, ai, reading]
+tags: [ai, self]
 created: 2026-09-15
 source: conversation
 ---

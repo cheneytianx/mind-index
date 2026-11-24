@@ -1,5 +1,5 @@
 ---
-tags: [linux-kernel, signal, thread, concurrency]
+tags: [linux, kernel, concurrency]
 created: 2026-06-25
 source: conversation
 ---

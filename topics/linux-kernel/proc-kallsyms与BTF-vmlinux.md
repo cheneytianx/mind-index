@@ -1,5 +1,5 @@
 ---
-tags: [linux, kernel, ebpf, debugging]
+tags: [linux, kernel, ebpf]
 created: 2026-07-20
 source: conversation
 ---

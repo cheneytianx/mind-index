@@ -1,5 +1,5 @@
 ---
-tags: [ebpf, kernel, tracing, concept]
+tags: [ebpf, kernel]
 created: 2026-05-20
 source: conversation
 ---

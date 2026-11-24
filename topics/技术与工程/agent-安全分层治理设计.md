@@ -1,5 +1,5 @@
 ---
-tags: [agent, security, architecture]
+tags: [security, ai]
 created: 2026-05-28
 source: conversation
 ---

@@ -1,5 +1,5 @@
 ---
-tags: [linux, kernel, concept, process]
+tags: [linux, kernel]
 created: 2026-05-23
 source: conversation
 ---

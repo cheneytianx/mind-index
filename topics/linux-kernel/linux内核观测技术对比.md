@@ -1,5 +1,5 @@
 ---
-tags: [linux, kernel, ebpf, observability, security, kernel-module]
+tags: [linux, kernel, ebpf, security]
 created: 2026-05-19
 source: conversation
 ---

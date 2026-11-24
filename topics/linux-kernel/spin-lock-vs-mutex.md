@@ -1,5 +1,5 @@
 ---
-tags: [concurrent, os, lock, mutex, kernel]
+tags: [kernel, concurrency]
 created: 2026-05-18
 source: conversation
 ---

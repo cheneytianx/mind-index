@@ -1,5 +1,5 @@
 ---
-tags: [ai, productivity, organization, paradox, technology-diffusion]
+tags: [ai, economics]
 created: 2026-05-11
 source: conversation
 aliases: [AI productivity paradox, Solow paradox AI, 多级传导模型]

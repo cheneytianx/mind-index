@@ -1,5 +1,5 @@
 ---
-tags: [security, web-security, ssrf, attack-surface]
+tags: [security, network]
 created: 2026-06-27
 source: conversation
 ---

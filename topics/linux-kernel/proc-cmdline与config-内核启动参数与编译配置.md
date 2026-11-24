@@ -1,5 +1,5 @@
 ---
-tags: [linux-kernel, procfs, boot]
+tags: [linux, kernel]
 created: 2026-07-30
 source: conversation
 ---

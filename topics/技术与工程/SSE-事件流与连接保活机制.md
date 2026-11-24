@@ -1,5 +1,5 @@
 ---
-tags: [web, protocol, sse, networking]
+tags: [network]
 created: 2026-05-18
 source: conversation
 ---
